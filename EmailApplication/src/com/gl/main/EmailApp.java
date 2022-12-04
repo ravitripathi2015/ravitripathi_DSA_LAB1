@@ -23,26 +23,29 @@ public class EmailApp {
 		{
 		case 1:
 			emp.seteMail(cred.generateEmailAddress(emp.getFirstName(),emp.getLastName(),"Technical"));
-			
+			emp.setPwd(cred.generatePassword());
+			cred.showCredentials(emp);
 			break;
 		case 2:
 			emp.seteMail(cred.generateEmailAddress(emp.getFirstName(),emp.getLastName(),"Admin"));
-		
+			emp.setPwd(cred.generatePassword());
+			cred.showCredentials(emp);
 			break;
 		case 3:
 			emp.seteMail(cred.generateEmailAddress(emp.getFirstName(),emp.getLastName(),"Human Resource"));
-			
+			emp.setPwd(cred.generatePassword());
+			cred.showCredentials(emp);
 			break;
 		case 4:
 			emp.seteMail(cred.generateEmailAddress(emp.getFirstName(),emp.getLastName(),"Legal"));
-			cred.generatePassword();
+			emp.setPwd(cred.generatePassword());
+			cred.showCredentials(emp);
 			break;
 		default:
 			System.out.println("Invalid Department Email and Password can't be generated");
 			break;
 		}
-		emp.setPwd(cred.generatePassword());
-		cred.showCredentials(emp);
+
 		scan.close();
 	}
 
